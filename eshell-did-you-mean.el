@@ -80,7 +80,6 @@ Adapted from `helm-esh-get-candidates'."
            pcomplete-seen pcomplete-norm-func
            pcomplete-args pcomplete-last pcomplete-index
            (pcomplete-autolist pcomplete-autolist)
-           (pcomplete-suffix-list pcomplete-suffix-list)
            (table (pcomplete-completions))
            (entry (or (try-completion "" (pcomplete-entries))
                       "")))

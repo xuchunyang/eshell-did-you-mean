@@ -1,6 +1,6 @@
 * eshell-did-you-mean
 
-command not found (“did you mean…” feature) in Eshell.
+command not found ("did you mean…" feature) in Eshell.
 
 [[./img/eshell-did-you-mean.png]]
 

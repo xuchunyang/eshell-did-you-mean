@@ -1,4 +1,4 @@
-;;; eshell-did-you-mean.el --- command not found (“did you mean…” feature) in Eshell  -*- lexical-binding: t; -*-
+;;; eshell-did-you-mean.el --- command not found ("did you mean…" feature) in Eshell  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2015  Chunyang Xu
 

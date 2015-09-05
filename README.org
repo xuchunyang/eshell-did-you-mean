@@ -1,0 +1,12 @@
+* eshell-did-you-mean
+
+command not found (“did you mean…” feature) in Eshell.
+
+[[./img/eshell-did-you-mean.png]]
+
+** Setup
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'eshell-preoutput-filter-functions
+             #'eshell-did-you-mean-output-filter)
+#+END_SRC

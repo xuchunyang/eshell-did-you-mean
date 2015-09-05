@@ -3,7 +3,7 @@
 ;; Copyright (C) 2015  Chunyang Xu
 
 ;; Author: Chunyang Xu <xuchunyang56@gmail.com>
-;; URL: https://github.com/xuchunyang/emacs.d
+;; URL: https://github.com/xuchunyang/eshell-did-you-mean
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: eshell
 

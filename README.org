@@ -1,4 +1,4 @@
-* eshell-did-you-mean
+* eshell-did-you-mean [[http://melpa.org/#/eshell-did-you-mean][http://melpa.org/packages/eshell-did-you-mean-badge.svg]]
 
 command not found ("did you mean…" feature) in Eshell.
 

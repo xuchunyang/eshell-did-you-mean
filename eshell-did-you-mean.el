@@ -148,8 +148,8 @@ Should be added to `eshell-preoutput-filter-functions'."
                     (if (= (length guesses) 1)
                         "Did you mean this?"
                       "Did you mean one of these?") "\n"
-                      (mapconcat (lambda (elt) (format "\t%s\n" (car elt)))
-                                 guesses ""))
+                      (mapconcat (lambda (elt) (format "\t%s" (car elt)))
+                                 guesses "\n"))
                  output)))
     output))
 

@@ -7,8 +7,7 @@ command not found ("did you mean…" feature) in Eshell.
 ** Setup
 
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'eshell-preoutput-filter-functions
-             #'eshell-did-you-mean-output-filter)
+(eshell-did-you-mean-setup)
 #+END_SRC
 
 ** Known issues

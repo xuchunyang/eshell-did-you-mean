@@ -81,27 +81,25 @@ If THRESHOLD is non-nil, use is as the maximum edit distance."
 (defun eshell-did-you-mean-output-filter (output)
   "\"Did you mean\" filter for eshell OUTPUT.
 Should be added to `eshell-preoutput-filter-functions'."
-  (if (and (not (= eshell-last-command-status 0))
+  (if (and eshell-last-command-name
+           (not (eshell-exit-success-p))
            (string-prefix-p (format "%s: command not found"
                                     eshell-last-command-name)
                             output))
-      (progn (unless eshell-did-you-mean--all-commands
-               (setq eshell-did-you-mean--all-commands
-                     (eshell-did-you-mean--get-all-commands)))
-             (let ((guesses (eshell-did-you-mean--edit-distances
-                             eshell-last-command-name
-                             eshell-did-you-mean--all-commands
-                             2)))
-               (if guesses
-                   (concat
-                    output
-                    "\n\n"
-                    (if (= (length guesses) 1)
-                        "Did you mean this?"
-                      "Did you mean one of these?") "\n"
-                      (mapconcat (lambda (elt) (format "\t%s" (car elt)))
-                                 guesses "\n"))
-                 output)))
+      (let ((guesses (eshell-did-you-mean--edit-distances
+                      eshell-last-command-name
+                      eshell-did-you-mean--all-commands
+                      2)))
+        (if guesses
+            (concat
+             output
+             "\n\n"
+             (if (= (length guesses) 1)
+                 "Did you mean this?"
+               "Did you mean one of these?") "\n"
+               (mapconcat (lambda (elt) (format "\t%s" (car elt)))
+                          guesses "\n"))
+          output))
     output))
 
 ;;;###autoload

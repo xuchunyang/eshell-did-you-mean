@@ -82,7 +82,6 @@ If THRESHOLD is non-nil, use is as the maximum edit distance."
   "\"Did you mean\" filter for eshell OUTPUT.
 Should be added to `eshell-preoutput-filter-functions'."
   (if (and eshell-last-command-name
-           (not (eshell-exit-success-p))
            (string-prefix-p (format "%s: command not found"
                                     eshell-last-command-name)
                             output))

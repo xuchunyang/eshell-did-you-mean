@@ -9,8 +9,3 @@ command not found ("did you mean…" feature) in Eshell.
 #+BEGIN_SRC emacs-lisp
 (eshell-did-you-mean-setup)
 #+END_SRC
-
-** Known issues
-
-eshell-did-you-mean does not work at the first invocation during an Emacs
-session, I can not figure out why, maybe it is a bug of Eshell.
